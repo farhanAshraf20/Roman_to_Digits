@@ -56,7 +56,7 @@ int main()
 		temp++;
 	}
 	
-	printf("size of input : %d\n", size);
+	printf("size of your input is : %d\n", size);
 	
 	temp = first;
 	letterPtr = fix_letter;
