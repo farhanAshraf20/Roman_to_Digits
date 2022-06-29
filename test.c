@@ -50,7 +50,7 @@ int main()
 	// temp = first;
 	
 	
-	while(*`temp != '\0')
+	while(*temp != '\0')
 	{
 		size += sizeof(*temp);
 		temp++;
