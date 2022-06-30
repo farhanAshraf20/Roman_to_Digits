@@ -1,4 +1,6 @@
-#include"roman_to_digits.h"
+#include"includes.h"
+
+
 int main()
 {
 	char *input;
@@ -7,6 +9,7 @@ int main()
 
 	int size=0;
 	int i=0, num;
+	int flag =1;
 
 
 	first = input;
@@ -29,10 +32,40 @@ int main()
 		temp++;
 	}
 	
-	printf("size of input : %d\n", size);
+	printf("size of your input is : %d\n", size);
 	
 	temp = first;
 	letterPtr = fix_letter;
+
+for(int i=0; i<size;i++)
+			{
+				for(int j=0;j < 7;j++)
+				{
+					if(fix_letter[j] == input[i])
+					{
+						flag=0;
+						printf("%c ",input[i]);
+						break;
+					}
+					else
+					{
+						flag=1;
+					}
+				}
+				
+			}
+			if(flag == 0)
+			{
+				printf("\n Valid input \n");
+				//code logic
+			}
+			else
+			{
+				printf("\nInvalid entry\n");
+			}
+
+	
+
 
 	if(size == 1)
 	{
@@ -50,11 +83,15 @@ int main()
 		}
 
 		printf("Interger is : %d\n", fix_roman_no[num]);
+		
 
 	}
 
-	else{
-		printf("Invalid entry\n");
+	else
+	{
+	
+			
+		
 	}
 
 	
