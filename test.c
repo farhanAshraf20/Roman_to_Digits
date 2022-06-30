@@ -19,13 +19,8 @@ Roman numeral (n)	Decimal value (v)
 	M			1000
 	
 *****************************************************************************/
-
-
 char fix_letter[]="IVXLCDM";
 int fix_roman_no[] = {1,5,10,50,100,500,1000};
-
-
-
 int main()
 {
 	char *input;
@@ -34,6 +29,7 @@ int main()
 
 	int size=0;
 	int i=0, num;
+	int flag =1;
 
 
 	first = input;
@@ -81,7 +77,34 @@ int main()
 	}
 
 	else{
-		printf("Invalid entry\n");
+	
+		for(int i=0; i<size;i++)
+		{
+			for(int j=0;j < 7;j++)
+			{
+				if(fix_letter[j] == input[i])
+				{
+					flag=0;
+					printf("%c\n",input[i]);
+					break;
+				}
+				else
+				{
+					flag=1;
+				}
+			}
+			
+		}
+		if(flag == 0)
+		{
+			printf("\n Valid input \n");
+			//code logic
+		}
+		else
+		{
+			printf("\nInvalid entry\n");
+		}
+		
 	}
 
 	
