@@ -6,7 +6,7 @@ int function_check(char input)
     {
         if(input == fix_letter[i])
         {
-            printf("roman found at %d : %c\n",i, fix_letter[i]);
+            //printf("roman found at %d : %c\n",i, fix_letter[i]);
             return i;
         }
     }

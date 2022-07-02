@@ -1,15 +1,17 @@
 #include"includes.h"
 
-
 int main()
 {
 	char *input;
 	char *temp, *first;
 	char *letterPtr;
+	char k;
 
 	int size=0;
 	int i=0, num;
 	int flag =1;
+	int sum = 0;
+	int p=10000;
 
 
 	first = input;
@@ -37,32 +39,114 @@ int main()
 	temp = first;
 	letterPtr = fix_letter;
 
-for(int i=0; i<size;i++)
+		for(int i=0; i<size;i++)
+		{
+			for(int j=0;j < 7;j++)
 			{
-				for(int j=0;j < 7;j++)
+				if(fix_letter[j] == input[i])
 				{
-					if(fix_letter[j] == input[i])
-					{
-						flag=0;
-						printf("%c ",input[i]);
-						break;
-					}
-					else
-					{
-						flag=1;
-					}
+					flag=0;
+					//printf("%c ",input[i]);
+					break;
 				}
-				
+				else
+				{
+					flag=1;
+				}
 			}
-			if(flag == 0)
-			{
-				printf("\n Valid input \n");
-				//code logic
+			
+		}
+		if(flag == 0)
+		{
+			printf("\nValid input \n");
+			//code logic
+			for(i=0;i<size;i++){
+        		k=input[i];
+        		
+        		
+			switch(k){
+			    case 'I':
+				{
+				    sum+=1;
+				    p=1;
+				    break;
+				}
+			    case 'V':
+			    {
+				if(p>=5){
+				    sum+=5;
+				    p=5;
+				}
+				else{
+				    sum=5-sum;
+				    
+				}
+				break;
+			    }
+			    case 'X':
+			    {
+				if(p>=10){
+				    sum+=10;
+				    p=10;
+				}
+				else{
+				    sum=10-sum;
+				}
+				break;
+			    }
+			    case 'L':
+			    {
+				if(p>=50){
+				    sum+=50;
+				    p=50;
+				}
+				else{
+				    sum=50-sum;
+				}
+				break;
+			    }
+			    case 'C':
+			    {
+				if(p>=100){
+				    sum+=100;
+				    p=100;
+				}
+				else{
+				    sum=100-sum;
+				}
+				break;
+			    }
+			    case 'D':
+			    {
+				if(p>=500){
+				    sum+=500;
+				    p=500;
+				}
+				else{
+				    sum=500-sum;
+				}
+				break;
+			    }
+			    case 'M':
+			    {
+				if(p>=1000){
+				    sum+=1000;
+				    p=1000;
+				}
+				else{
+				    sum=1000-sum;
+				}
+				break;
+			    }
+
 			}
-			else
-			{
-				printf("\nInvalid entry\n");
-			}
+		    }
+		    printf("\nInterger is : %d\n",sum);
+		}
+		else
+		{
+			printf("\nInvalid entry\n");
+		}
 
 	
 
@@ -82,13 +166,15 @@ for(int i=0; i<size;i++)
 			letterPtr++;
 		}
 
-		printf("Interger is : %d\n", fix_roman_no[num]);
+		//printf("Interger is : %d\n", fix_roman_no[num]);
 		
 
 	}
 
 	else
 	{
+	
+	
 	
 			
 		

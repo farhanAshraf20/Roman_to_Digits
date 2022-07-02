@@ -23,6 +23,30 @@ Roman numeral (n)	Decimal value (v)
 			
 *****************************************************************************/
 
+int digit(char c){
+ 
+    int value=0;
+    /*
+    
+ 
+    switch(c){
+         case 'I': value = 1; break;
+         case 'V': value = 5; break;
+         case 'X': value = 10; break;
+         case 'L': value = 50; break;
+         case 'C': value = 100; break;
+         case 'D': value = 500; break;
+         case 'M': value = 1000; break;
+         case '\0': value = 0; break;
+         default: value = -1; 
+    }
+    */
+ 
+    return value;
+}
+
+
+
 int main()
 {
 	char *input;
@@ -32,6 +56,7 @@ int main()
 	int size=0;
 	int i=0, num;
 	int flag =1;
+	long int number =0;
 
 
 	first = input;
@@ -99,8 +124,21 @@ int main()
 		}
 		if(flag == 0)
 		{
-			printf("\n Valid input \n");
-			//code logic
+			i=0;
+			while(input[i])
+			{
+				printf("\n Valid input \n");
+				//code logic
+				if(digit(input[i]) >= digit(input[i+1]))
+				     number = number + digit(input[i]);
+				 else{
+				     number = number + (digit(input[i+1]) - digit(input[i]));
+				     i++;
+				 }
+				 i++;
+			}
+			
+			printf("Its decimal value is : %ld",number);
 		}
 		else
 		{
