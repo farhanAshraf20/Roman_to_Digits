@@ -149,9 +149,6 @@ int main()
 			printf("\nInvalid entry\n");
 		}
 
-	
-
-
 	if(size == 1)
 	{
 		i = 0;
