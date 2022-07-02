@@ -5,7 +5,7 @@ int main()
 	char *input;
 	char *temp, *first;
 	char *letterPtr;
-	char k;
+	char input_char_by_char;
 
 	int size=0;
 	int i=0, num;
@@ -60,86 +60,87 @@ int main()
 		{
 			printf("\nValid input \n");
 			//code logic
-			for(i=0;i<size;i++){
-        		k=input[i];
-        		
-        		
-			switch(k){
-			    case 'I':
+			for(i=0;i<size;i++)
+			{
+        		input_char_by_char = input[i];
+        
+				switch(input_char_by_char)
 				{
-				    sum+=1;
-				    p=1;
-				    break;
-				}
-			    case 'V':
-			    {
-				if(p>=5){
-				    sum+=5;
-				    p=5;
-				}
-				else{
-				    sum=5-sum;
-				    
-				}
-				break;
-			    }
-			    case 'X':
-			    {
-				if(p>=10){
-				    sum+=10;
-				    p=10;
-				}
-				else{
-				    sum=10-sum;
-				}
-				break;
-			    }
-			    case 'L':
-			    {
-				if(p>=50){
-				    sum+=50;
-				    p=50;
-				}
-				else{
-				    sum=50-sum;
-				}
-				break;
-			    }
-			    case 'C':
-			    {
-				if(p>=100){
-				    sum+=100;
-				    p=100;
-				}
-				else{
-				    sum=100-sum;
-				}
-				break;
-			    }
-			    case 'D':
-			    {
-				if(p>=500){
-				    sum+=500;
-				    p=500;
-				}
-				else{
-				    sum=500-sum;
-				}
-				break;
-			    }
-			    case 'M':
-			    {
-				if(p>=1000){
-				    sum+=1000;
-				    p=1000;
-				}
-				else{
-				    sum=1000-sum;
-				}
-				break;
-			    }
+					case 'I':
+					{
+						sum+=1;
+						p=1;
+						break;
+					}
+					case 'V':
+					{
+					if(p>=5){
+						sum+=5;
+						p=5;
+					}
+					else{
+						sum=5-sum;
+						
+					}
+					break;
+					}
+					case 'X':
+					{
+					if(p>=10){
+						sum+=10;
+						p=10;
+					}
+					else{
+						sum=10-sum;
+					}
+					break;
+					}
+					case 'L':
+					{
+					if(p>=50){
+						sum+=50;
+						p=50;
+					}
+					else{
+						sum=50-sum;
+					}
+					break;
+					}
+					case 'C':
+					{
+					if(p>=100){
+						sum+=100;
+						p=100;
+					}
+					else{
+						sum=100-sum;
+					}
+					break;
+					}
+					case 'D':
+					{
+					if(p>=500){
+						sum+=500;
+						p=500;
+					}
+					else{
+						sum=500-sum;
+					}
+					break;
+					}
+					case 'M':
+					{
+					if(p>=1000){
+						sum+=1000;
+						p=1000;
+					}
+					else{
+						sum=1000-sum;
+					}
+					break;
+					}
 
-			}
+				}
 		    }
 		    printf("\nInterger is : %d\n",sum);
 		}
