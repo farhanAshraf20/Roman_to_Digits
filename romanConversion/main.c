@@ -11,15 +11,12 @@ int main()
 	int i=0, num;
 	int flag =1;
 	int sum = 0;
-	int p=10000;
-
-
-	first = input;
-	temp = first;
-
 
 	printf("Enter a roman No. (b/w I to M) : ");
 	scanf("%s", input);
+
+	first = input;
+	temp = first;
 
 	// printf("your input : %s", input);
 	
@@ -39,28 +36,25 @@ int main()
 	temp = first;
 	letterPtr = fix_letter;
 
-		for(int i=0; i<size;i++)
-		{
-			for(int j=0;j < 7;j++)
-			{
-				if(fix_letter[j] == input[i])
-				{
-					flag=0;
-					//printf("%c ",input[i]);
-					break;
-				}
-				else
-				{
-					flag=1;
-				}
-			}
-			
-		}
-		if(flag == 0)
-		{
-			printf("\nValid input \n");
-			//code logic
-			for(i=0;i<size;i++)
+		// for(int i=0; i<size;i++)
+		// {
+		// 	for(int j=0;j < 7;j++)
+		// 	{
+		// 		if(fix_letter[j] == input[i])
+		// 		{
+		// 			//if(input[i]>)
+		// 			flag=0;
+		// 			//printf("%c ",input[i]);
+		// 			break;
+		// 		}
+		// 		else
+		// 		{
+		// 			flag=1;
+		// 		}
+		// 	}	
+		// }
+		///*********************************
+		for(i=0;i<size;i++)
 			{
         		input_char_by_char = input[i];
         
@@ -69,14 +63,14 @@ int main()
 					case 'I':
 					{
 						sum+=1;
-						p=1;
+						fix_roman_no[6]=1;
 						break;
 					}
 					case 'V':
 					{
-					if(p>=5){
+					if(fix_roman_no[6]>=5){
 						sum+=5;
-						p=5;
+						fix_roman_no[6]=5;
 					}
 					else{
 						sum=5-sum;
@@ -86,9 +80,9 @@ int main()
 					}
 					case 'X':
 					{
-					if(p>=10){
+					if(fix_roman_no[6]>=10){
 						sum+=10;
-						p=10;
+						fix_roman_no[6]=10;
 					}
 					else{
 						sum=10-sum;
@@ -97,9 +91,9 @@ int main()
 					}
 					case 'L':
 					{
-					if(p>=50){
+					if(fix_roman_no[6]>=50){
 						sum+=50;
-						p=50;
+						fix_roman_no[6]=50;
 					}
 					else{
 						sum=50-sum;
@@ -108,9 +102,9 @@ int main()
 					}
 					case 'C':
 					{
-					if(p>=100){
+					if(fix_roman_no[6]>=100){
 						sum+=100;
-						p=100;
+						fix_roman_no[6]=100;
 					}
 					else{
 						sum=100-sum;
@@ -119,9 +113,9 @@ int main()
 					}
 					case 'D':
 					{
-					if(p>=500){
+					if(fix_roman_no[6]>=500){
 						sum+=500;
-						p=500;
+						fix_roman_no[6]=500;
 					}
 					else{
 						sum=500-sum;
@@ -130,54 +124,44 @@ int main()
 					}
 					case 'M':
 					{
-					if(p>=1000){
+					if(fix_roman_no[6]>=1000){
 						sum+=1000;
-						p=1000;
+						fix_roman_no[6]=1000;
 					}
 					else{
 						sum=1000-sum;
 					}
 					break;
 					}
+					default :
+					{
+						printf("\nInvalid entry\n");
+						break;
+					}
 
 				}
 		    }
 		    printf("\nInterger is : %d\n",sum);
-		}
-		else
-		{
-			printf("\nInvalid entry\n");
-		}
 
-	if(size == 1)
-	{
-		i = 0;
+		///***********************************
+		//i = 0;
 		while(*letterPtr != '\0')
 		{
-			if(*letterPtr == *temp)
-			{
-				num = i;
-				break;
-			}
+			// if(*letterPtr == *temp)
+			// {
+			// 	num = i;
+			// 	break;
+			// }
 
-			i++;
+			//i++;
 			letterPtr++;
 		}
 
-		//printf("Interger is : %d\n", fix_roman_no[num]);
-		
-
-	}
-
-	else
-	{
-	
-	
-	
-			
-		
-	}
-
-	
 	return 0;
 }
+
+
+// int function_check(char input)
+// {
+// 	return 0;
+// }

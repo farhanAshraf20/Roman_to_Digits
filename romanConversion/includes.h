@@ -28,3 +28,9 @@ Roman numeral (n)	Decimal value (v)
 *****************************************************************************/
 char fix_letter[]="IVXLCDM";
 int fix_roman_no[] = {1,5,10,50,100,500,1000};
+
+
+int function_check(char input);
+
+
+
