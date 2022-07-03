@@ -24,6 +24,9 @@ Roman numeral (n)	Decimal value (v)
 	If a lower value digit is written to the left of a higher value digit, it is subtracted.
 	If a lower value digit is written to the right of a higher value digit, it is added.
 	Only I, X, and C can be used as subtractive numerals.
+	The symbols V, L, D are never repeated in a Roman number. 
+	This is because ‘VV’ would give you the value of 10 which is already represented by the symbol X. 
+	In the same fashion, ‘LL’ would already be equal to C and ‘DD’ to M.
 	
 *****************************************************************************/
 char fix_letter[]="IVXLCDM";
