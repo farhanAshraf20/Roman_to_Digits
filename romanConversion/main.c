@@ -4,19 +4,13 @@ int main()
 {
 	char *input;
 	char *temp, *first;
-	char *letterPtr;
-	char input_char_by_char;
-
-	int size=0;
-	int i=0;
-	int flag =1;
-	int sum = 0;
-	int count_I=0, count_X=0, count_C=0,count_V=0,count_L=0,count_D=0;
-
+	//char *letterPtr;
+	
 	printf("Enter a roman No. (b/w I to M) : ");
 	scanf("%s", input);
 
 	first = input;
+	far=input;
 	temp = first;
 
 	// printf("your input : %s", input);
@@ -34,19 +28,15 @@ int main()
 	
 	//printf("size of your input is : %d\n", size);
 	
-	temp = first;
-	letterPtr = fix_letter;
+	//temp = first;
 
 		for(int i=0; i<size;i++)
 		{
 			for(int j=0;j < 7;j++)
 			{
+				//if(fix_letter[j] == input[i])
 				if(fix_letter[j] == input[i])
 				{
-					switch (input[i])
-					{
-
-					}
 					flag=0;
 					//printf("%c ",input[i]);
 					break;
@@ -61,7 +51,8 @@ int main()
 		{
 			for(i=0;i<size;i++)
 				{
-					input_char_by_char = input[i];
+					//input_char_by_char = input[i];
+					input_char_by_char = far[i];
 			
 					switch(input_char_by_char)
 					{
@@ -177,28 +168,11 @@ int main()
 		}
 		else
 		{
+			//printf("\nINPUT !!!!! : %s\n",first);
 			printf("\ninvalid input\n");
 		}
 
 		///***********************************
-		//i = 0;
-		while(*letterPtr != '\0')
-		{
-			// if(*letterPtr == *temp)
-			// {
-			// 	num = i;
-			// 	break;
-			// }
-
-			//i++;
-			letterPtr++;
-		}
 
 	return 0;
 }
-
-
-// int function_check(char input)
-// {
-// 	return 0;
-// }

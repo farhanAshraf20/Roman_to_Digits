@@ -32,8 +32,14 @@ Roman numeral (n)	Decimal value (v)
 char fix_letter[]="IVXLCDM";
 int fix_roman_no[] = {1,5,10,50,100,500,1000};
 
-
-int function_check(char input);
+char *far;
+char input_char_by_char;
+int size=0;
+int i=0;
+int flag =1;
+int sum = 0;
+int count_I=0, count_X=0, count_C=0,count_V=0,count_L=0,count_D=0;
+void function_check(char far);
 
 
 
