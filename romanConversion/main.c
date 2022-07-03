@@ -11,7 +11,7 @@ int main()
 	int i=0;
 	int flag =1;
 	int sum = 0;
-	int count_I=0, count_X=0, count_C=0;
+	int count_I=0, count_X=0, count_C=0,count_V=0,count_L=0,count_D=0;
 
 	printf("Enter a roman No. (b/w I to M) : ");
 	scanf("%s", input);
@@ -73,6 +73,7 @@ int main()
 					}
 					case 'V':
 					{
+						count_V++;
 					if(fix_roman_no[6]>=5){
 						sum+=5;
 						fix_roman_no[6]=5;
@@ -97,6 +98,7 @@ int main()
 					}
 					case 'L':
 					{
+						count_L++;
 					if(fix_roman_no[6]>=50){
 						sum+=50;
 						fix_roman_no[6]=50;
@@ -120,6 +122,7 @@ int main()
 					}
 					case 'D':
 					{
+						count_D++;
 					if(fix_roman_no[6]>=500){
 						sum+=500;
 						fix_roman_no[6]=500;
@@ -148,7 +151,7 @@ int main()
 
 				}
 		    }
-			if(( count_I <= 3 ) && ( count_C <= 3 ) && ( count_X <=3 ))
+			if(( count_I <= 3 ) && ( count_C <= 3 ) && ( count_X <=3 )&&(count_V<=1)&&(count_L<=1)&&(count_D<=1))
 			{
 				printf("\nInterger is : %d\n",sum);
 			}
