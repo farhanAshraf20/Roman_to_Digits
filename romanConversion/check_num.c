@@ -11,7 +11,7 @@ int check_num(void)
     for(int i=0;i<size;i++)
         {
             //input_char_by_char = input[i];
-            input_char_by_char = far[i];
+            input_char_by_char = fun_input[i];
 
             switch(input_char_by_char)
             {

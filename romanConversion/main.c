@@ -19,7 +19,7 @@ int main()
     scanf("%s", input);
 
     first = input;
-    far=input;
+    fun_input=input;
     temp = first;
 
     // printf("your input : %s", input);

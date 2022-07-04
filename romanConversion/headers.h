@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -5,7 +6,7 @@
 //declaration of global vars
 char fix_letter[8];
 int fix_roman_no[7];
-char *far;
+char *fun_input;
 char input_char_by_char;
 int size;
 int flag;
