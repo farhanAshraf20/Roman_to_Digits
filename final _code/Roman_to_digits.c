@@ -5,12 +5,15 @@
 char fix_letter[]="IVXLCDM";
 int fix_roman_no[] = {1,5,10,50,100,500,1000};
 
+char *fun_input;
 char input_char_by_char;
 int size=0;
 int i=0;
 int flag =1;
 int sum = 0;
 int count_I=0, count_X=0, count_C=0,count_V=0,count_L=0,count_D=0;
+int function_check(char *fun_input);
+
 
 
 int main()
@@ -24,6 +27,7 @@ int main()
 	scanf("%s", input);
 
 	first = input;
+	fun_input=input;
 	temp = first;
 
 	// printf("your input : %s", input);
@@ -43,32 +47,46 @@ int main()
 	
 	//temp = first;
 
-	for(int i=0; i<size;i++)
-	{
-		for(int j=0;j < 7;j++)
+		for(int i=0; i<size;i++)
 		{
-			
-			if(fix_letter[j] == input[i])
+			for(int j=0;j < 7;j++)
 			{
-				flag=0;
-				//printf("%c ",input[i]);
-				break;
-			}
-			else
-			{
-				flag=1;
-			}
-		}	
-	}
-	
-	//*****************************************************************************************
-	if (flag == 0 )
-	{
-		for(i=0;i<size;i++)
+				//if(fix_letter[j] == input[i])
+				if(fix_letter[j] == input[i])
+				{
+					flag=0;
+					//printf("%c ",input[i]);
+					break;
+				}
+				else
+				{
+					flag=1;
+				}
+			}	
+		}
+		if (flag == 0 )
 		{
-		
-		input_char_by_char = input[i];
-		
+			function_check(fun_input);
+		}
+		else
+		{
+			//printf("\nINPUT !!!!! : %s\n",first);
+			printf("\ninvalid input\n");
+		}
+
+		///***********************************
+
+	return 0;
+}
+
+int function_check(char *fun_input)
+{
+	for(i=0;i<size;i++)
+	{
+	    //printf("FUN out : %s",fun_input);
+		//input_char_by_char = input[i];
+		input_char_by_char = fun_input[i];
+
 		switch(input_char_by_char)
 		{
 			case 'I':
@@ -172,9 +190,6 @@ int main()
 
 		}
 	}
-	
-	//****************************************************************************************************
-		
 	if(( count_I <= 3 ) && ( count_C <= 3 ) && ( count_X <=3 )&&(count_V<=1)&&(count_L<=1)&&(count_D<=1))
 	{
 		printf("\nInterger is : %d\n",sum);
@@ -183,17 +198,6 @@ int main()
 	{
 		printf("\ninvalid input\n");
 	}
-		}
-		else
-		{
-			//printf("\nINPUT !!!!! : %s\n",first);
-			printf("\ninvalid input\n");
-	}
-
-	//**************************************************************************************************
-
-	return 0;
+	
+return 0;
 }
-
-
-
